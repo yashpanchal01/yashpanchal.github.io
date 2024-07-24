@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YASH's - Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0D1B2A;
+            color: #E0E1DD;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: #1B263B;
+            padding: 0 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #E0E1DD;
+            font-weight: 600;
+            transition: color 0.3s, font-size 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #E63946;
+            font-size: 1.025rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #E63946;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 120px 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .firstSection>div {
+            width: 40%;
+        }
+
+        .leftSection {
+            font-size: 3rem;
+            margin: 30px 0;
+        }
+
+        .rightSection img {
+            width: 80%;
+        }
+
+        .highlight {
+            color: #E63946;
+        }
+
+        #element {
+            color: #E63946;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            color: #E0E1DD;
+            background-color: #1B263B;
+            border: 1px solid #E63946;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #E63946;
+            color: #1B263B;
+        }
+
+        .aboutSection {
+            margin: 40% 0;
+            text-align: center;
+        }
+
+        .aboutSection p {
+            color: #E0E1DD;
+            font-size: 1.7rem;
+            margin: 0 10%;
+        }
+
+        .contactSection {
+            color: #E0E1DD;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .aboutSection h2 {
+            margin-bottom: 16px;
+        }
+
+        .contactSection h2 {
+            margin-bottom: 16px;
+        }
+
+        .contactSection p {
+            font-size: 1.2rem;
+        }
+
+        .contactSection a {
+            color: #F1FAEE;
+            text-decoration: none;
+        }
+
+        .contactSection a:hover {
+            color: #A8DADC;
+        }
+
+        @media (max-width: 768px) {
+            .firstSection {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .firstSection>div {
+                width: 80%;
+            }
+
+            .leftSection {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .rightSection img {
+                width: 100%;
+            }
+
+            .buttons {
+                text-align: center;
+            }
+
+            .aboutSection,
+            .contactSection {
+                margin: 20% 0;
+            }
+
+            .aboutSection p {
+                margin: 0 5%;
+            }
+        }
+
+        /* Page transition effects */
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="fade-in">
+    <header>
+        <nav>
+            <div class="left">Yash's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="highlight">Yash</span>
+                <div>&amp I am a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <a href="documents/Yash_Panchal_Resume.pdf" class="button" download>Download Resume</a>
+                    <a href="https://github.com/yashpanchal01" class="button" target="_blank">Visit GitHub</a>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="images/bg.png" alt="developer's image">
+            </div>
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        // Typed.js initialization
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Video Editor', 'Software Developer'],
+            typeSpeed: 50,
+            loop: true
+        });
+
+        // Smooth scrolling for internal links
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Page transition effects
+        window.addEventListener('beforeunload', function () {
+            document.body.classList.add('fade-out');
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            document.body.classList.add('fade-in');
+        });
+
+        // Ensure that fade-out effect works on navigation
+        document.querySelectorAll('a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').startsWith('http') || this.getAttribute('href').endsWith('.html')) {
+                    e.preventDefault();
+                    const url = this.getAttribute('href');
+                    document.body.classList.add('fade-out');
+                    setTimeout(() => {
+                        window.location.href = url;
+                    }, 500); // Match the transition duration
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
